@@ -1,0 +1,36 @@
+/* All Elements */
+* {
+	box-sizing: border-box;
+}
+
+
+
+/* Effects */
+.pr-tx {
+	color: #151C1F;
+}
+
+.se-tx {
+	color: #151C1F;
+}
+
+.wh-tx {
+	color: #f5f5f5;
+}
+
+.pr-bg {
+	background-color: #151C1F;
+}
+
+.wh-bg {
+	background-color: #ffffff;
+}
+
+/* HTML Tag Styles */
+
+body {
+	padding: 1rem 1.5rem;
+	background-color: #f5f5f5;
+}
+
+/* Navigation */
