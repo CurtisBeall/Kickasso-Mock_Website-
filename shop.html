@@ -12,37 +12,54 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 </head>
+
 <body>
 	<!-- Header Start -->
-	<header>
+	<header class="wh-bg">
 		<!-- Menu Start -->
-		<div class="menu">
-			<button class="menu_bt"><Span></Span>MENU</button>
-			<img src="" alt="Kickasso Logo">
-			<p class="cart_count">0</p><button class="menu_bt">CART</button>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col p-0">
+					<button class="pr-tx btn cl-bg p-0 m-0">
+					<div class="d-inline-block align-middle hamburger_container mr-3">
+						<div class="hamburger pr-bg m-0">
+						</div>
+						<div class="hamburger pr-bg">
+						</div>
+						<div class="hamburger pr-bg m-0">
+						</div>
+						</div>
+					<h3 class="d-inline-block align-middle">MENU</h3>
+					</button>
+				</div>
+				<div class="col p-0 m-0 text-right">
+					<option class="cart_count d-inline pr-tx gr-bg m-0 mr-3 rounded-circle align-middle" id="cart_count">0</option>
+					<button class="d-inline pr-tx btn cl-bg p-0"><h3>CART</h3></button>
+				</div>
+			</div>
 		</div>
 		<!-- Menu End -->
 		<!-- Navigation Start -->
-		<div class="nav_container">
+		<div class="nav_container pr-bg hover wh-tx hidden">
 			<!-- Navigation Buttons Start -->
-			<nav class="nav_container">
-				<h1><a href="" class="nav_item">HOME</a></h1>
-				<h1><a href="" class="nav_item">SHOP</a></h1>
-				<h1><a href="" class="nav_item">ABOUT</a></h1>
-				<h1><a href="" class="nav_item">CONTACT</a></h1>
+			<nav class="nav_btn_container">
+				<h1><a href="">HOME</a></h1>
+				<h1><a href="">SHOP</a></h1>
+				<h1><a href="">ABOUT</a></h1>
+				<h1><a href="">CONTACT</a></h1>
 			</nav>
 			<!-- Navigation Buttons End -->
 			<!-- Policy Start -->
-			<div class="policy_container">
-				<a href="">RETURN POLICY</a>
-				<a href="">DISCLAIMER</a>
+			<div class="mb-5">
+				<h5><a href="">RETURN POLICY</a></h5>
+				<h5><a href="">DISCLAIMER</a></h5>
 			</div>
 			<!-- Policy End -->
 			<!-- Social Icon Start -->
-			<div class="social_container">
-				<a href=""><img src="" alt="Facebook Logo" class="socail_icon"></a>
-				<a href=""><img src="" alt="Twitter Logo" class="socail_icon"></a>
-				<a href=""><img src="" alt="Pinterest Logo" class="socail_icon"></a>
+			<div class="social_container outline">
+				<a href="" class="social">Facebook</a>
+				<a href="" class="social twitter">Twitter</a>
+				<a href="" class="social pinterest">Pinterest</a>
 			</div>
 			<!-- Social Icon End -->
 
@@ -52,38 +69,48 @@
 	<!-- Header End -->
 	<!-- Main Start -->
 	<main>
-<!-- Filter Start -->
-		<div class="filter_container">
-<!-- Show Me Dropdown Start -->
-			<button class="dropdown">SHOW ME</button>
-			<div class="dropdown-menu">
-				<h4 class="dropdown-item">SNEAKERS</h4>
-				<h4 class="dropdown-item">SANDALS</h4>
+		<!-- Filter Start -->
+		<div class="filter_container m-0 mt-3 text-right pr-bg">
+			<!-- Show Me Dropdown Start -->
+			<div class="filter gr-tx p-0">
+				<h3><label for="show_me">SHOW ME</label>
+				<select class="form_control cl-bg" id="show_me">		
+				<option class="dropdown-item">SNEAKERS</option>
+				<option class="dropdown-item">SANDALS</option>
+					</select></h3>
 			</div>
-<!-- Show Me Dropdown End -->
-<!-- Size Dropdown Start -->
-			<button class="dropdown">SIZE</button>
-			<div class="dropdown-menu">
-				<h4 class="dropdown-item">12</h4>
-				<h4 class="dropdown-item">11</h4>
-				<h4 class="dropdown-item">10</h4>
-				<h4 class="dropdown-item">9</h4>
+			<!-- Show Me Dropdown End -->
+			<!-- Size Dropdown Start -->
+			<div class="filter gr-tx p-0">
+				<h3><label for="size">SIZE</label>
+				<select class="form_control cl-bg" id="size">				
+				<option class="dropdown-item">12</option>
+				<option class="dropdown-item">11</option>
+				<option class="dropdown-item">10</option>
+				<option class="dropdown-item">9</option>
+			</select></h3>
 			</div>
-<!-- Size Dropdown End -->
-<!-- Sort By Dropdown Start -->
-			<button class="dropdown">SORT BY</button>
-			<div class="dropdown-menu">
-				<h4 class="dropdown-item">PRICE</h4>
-				<h4 class="dropdown-item">SIZE</h4>
+			<!-- Size Dropdown End -->
+			<!-- Sort By Dropdown Start -->
+			<div class="filter gr-tx p-0">
+				<h3><label for="sort">SORT BY</label>
+				<select class="form_control cl-bg" id="sort">		
+				<option class="dropdown-item">PRICE</option>
+				<option class="dropdown-item">TYPE</option>
+			</select></h3>
 			</div>
-<!-- Sort By Dropdown End -->
-		</div>
-<!-- Filter End -->
-<!-- Filter Results Start -->		
-		<div class="filter_results">
 
+			<!-- Sort By Dropdown End -->
 		</div>
-<!-- Filter Results End -->		
+		<!-- Filter End -->
+		<!-- Filter Results Start -->
+		<div class="filter_results text-center mt-3">
+			<div class="product" style="background-image: url('img/products/lazy_days/M16A5042.jpg')">
+				<h3 class="wh-tx">LAZY DAYS</h3>
+				<h4>$130.00</h4>
+			</div>
+		</div>
+		<!-- Filter Results End -->
 	</main>
 	<!-- Main End -->
 
