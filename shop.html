@@ -20,70 +20,74 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col p-0">
-					<button class="pr-tx btn cl-bg p-0 m-0">
-					<div class="d-inline-block align-middle hamburger_container mr-3">
-						<div class="hamburger pr-bg m-0">
-						</div>
-						<div class="hamburger pr-bg">
-						</div>
-						<div class="hamburger pr-bg m-0">
-						</div>
-						</div>
+					<button class="pr-tx btn cl-bg p-0">
+					<div class="site_icons menu_icon d-inline-block align-middle">
+					</div>
 					<h3 class="d-inline-block align-middle">MENU</h3>
 					</button>
 				</div>
-				<div class="col p-0 m-0 text-right">
-					<option class="cart_count d-inline pr-tx gr-bg m-0 mr-3 rounded-circle align-middle" id="cart_count">0</option>
-					<button class="d-inline pr-tx btn cl-bg p-0"><h3>CART</h3></button>
+				<div class="logo col p-0">
+					<div class="align-middle">
+						<a href=""><img src="/img/logo.svg" alt=""></a>
+					</div>
+				</div>
+				<div class="col p-0 text-right">
+				<button class="pr-tx btn cl-bg p-0">
+					<h5 class="cart_count d-inline-block pr-tx gr-bg rounded-circle align-middle" id="cart_count">0</h5>
+					<h3 class="d-inline-block align-middle">CART</h3></button>
 				</div>
 			</div>
 		</div>
 		<!-- Menu End -->
-		<!-- Navigation Start -->
-		<div class="nav_container pr-bg hover wh-tx hidden">
-			<!-- Navigation Buttons Start -->
-			<nav class="nav_btn_container">
-				<h1><a href="">HOME</a></h1>
-				<h1><a href="">SHOP</a></h1>
-				<h1><a href="">ABOUT</a></h1>
-				<h1><a href="">CONTACT</a></h1>
-			</nav>
-			<!-- Navigation Buttons End -->
-			<!-- Policy Start -->
-			<div class="mb-5">
-				<h5><a href="">RETURN POLICY</a></h5>
-				<h5><a href="">DISCLAIMER</a></h5>
-			</div>
-			<!-- Policy End -->
-			<!-- Social Icon Start -->
-			<div class="social_container outline">
-				<a href="" class="social">Facebook</a>
-				<a href="" class="social twitter">Twitter</a>
-				<a href="" class="social pinterest">Pinterest</a>
-			</div>
-			<!-- Social Icon End -->
-
-		</div>
-		<!-- Navigation End -->
 	</header>
 	<!-- Header End -->
+	<!-- Navigation Start -->
+	<div class="nav_container pr-bg hover wh-tx-a hidden">
+		<!-- Navigation Buttons Start -->
+		<nav class="nav_btn_container">
+			<h1><a href="">HOME</a></h1>
+			<h1><a href="">SHOP</a></h1>
+			<h1><a href="">ABOUT</a></h1>
+			<h1><a href="">CONTACT</a></h1>
+		</nav>
+		<!-- Navigation Buttons End -->
+		<!-- Policy Start -->
+		<div class="mb-5">
+			<h5><a href="">RETURN POLICY</a></h5>
+			<h5><a href="">DISCLAIMER</a></h5>
+		</div>
+		<!-- Policy End -->
+		<!-- Social Icon Start -->
+		<div class="social_container outline">
+			<a href="" class="social">Facebook</a>
+			<a href="" class="social twitter">Twitter</a>
+			<a href="" class="social pinterest">Pinterest</a>
+		</div>
+		<!-- Social Icon End -->
+	</div>
+	<!-- Navigation End -->
 	<!-- Main Start -->
 	<main>
+		<!-- Filter Button Start -->
+		<div class="filter_btn p-0 text-center">
+			<button class="site_icons filter_icon pr-tx btn cl-bg p-0 m-0 d-inline-block"><h3>Filter</h3></button>
+		</div>
+		<!-- Filter Button End -->
 		<!-- Filter Start -->
-		<div class="filter_container m-0 mt-3 text-right pr-bg">
+		<div class="filter_container m-0 mt-3 text-right wh-bg hidden">
 			<!-- Show Me Dropdown Start -->
-			<div class="filter gr-tx p-0">
+			<div class="gr-tx p-0">
 				<h3><label for="show_me">SHOW ME</label>
-				<select class="form_control cl-bg" id="show_me">		
+					<select class="form_control cl-bg" id="show_me">		
 				<option class="dropdown-item">SNEAKERS</option>
 				<option class="dropdown-item">SANDALS</option>
 					</select></h3>
 			</div>
 			<!-- Show Me Dropdown End -->
 			<!-- Size Dropdown Start -->
-			<div class="filter gr-tx p-0">
+			<div class="gr-tx p-0">
 				<h3><label for="size">SIZE</label>
-				<select class="form_control cl-bg" id="size">				
+					<select class="form_control cl-bg" id="size">				
 				<option class="dropdown-item">12</option>
 				<option class="dropdown-item">11</option>
 				<option class="dropdown-item">10</option>
@@ -92,22 +96,53 @@
 			</div>
 			<!-- Size Dropdown End -->
 			<!-- Sort By Dropdown Start -->
-			<div class="filter gr-tx p-0">
+			<div class="gr-tx p-0">
 				<h3><label for="sort">SORT BY</label>
-				<select class="form_control cl-bg" id="sort">		
+					<select class="form_control cl-bg" id="sort">		
 				<option class="dropdown-item">PRICE</option>
 				<option class="dropdown-item">TYPE</option>
 			</select></h3>
 			</div>
-
 			<!-- Sort By Dropdown End -->
 		</div>
 		<!-- Filter End -->
 		<!-- Filter Results Start -->
-		<div class="filter_results text-center mt-3">
-			<div class="product" style="background-image: url('img/products/lazy_days/M16A5042.jpg')">
-				<h3 class="wh-tx">LAZY DAYS</h3>
-				<h4>$130.00</h4>
+		<div class="filter_results text-center">
+			<div class="product_container" style="background-image: url('img/products/donut_dreams/IMG_1954.jpg')">
+				<div class="product">
+					<h3>Donut Dreams</h3>
+					<h4>$130.00</h4>
+				</div>
+			</div>
+			<div class="product_container" style="background-image: url('img/products/freddy_kreuger/M16A4527.jpg')">
+				<div class="product">
+					<h3>Freddy Kreuger</h3>
+					<h4>$400.00</h4>
+				</div>
+			</div>
+			<div class="product_container" style="background-image: url('img/products/luxury_force_1_black/M16A7498-2.jpg')">
+				<div class="product">
+					<h3>LUXURY FORCE 1 BLACK</h3>
+					<h4>$400.00</h4>
+				</div>
+			</div>
+			<div class="product_container" style="background-image: url('img/products/adidas_akatsuki_slide/M16A4862-2.jpg')">
+				<div class="product">
+					<h3>ADIDAS AKATSUKI SLIDE</h3>
+					<h4>$150.00</h4>
+				</div>
+			</div>
+			<div class="product_container" style="background-image: url('img/products/super_mario_sb_dunk_low/image.jpg')">
+				<div class="product">
+					<h3>SUPER MARIO SB DUNK LOW</h3>
+					<h4>$315.00</h4>
+				</div>
+			</div>
+			<div class="product_container" style="background-image: url('img/products/adidas_akatsuki_slide/M16A4862-2.jpg')">
+				<div class="product">
+					<h3>TRUSSSSST ME GUCCI SLIDE</h3>
+					<h4>$550.00</h4>
+				</div>
 			</div>
 		</div>
 		<!-- Filter Results End -->
