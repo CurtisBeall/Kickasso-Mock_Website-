@@ -41,26 +41,49 @@
 	background-color: #dededf !important;
 }
 
-.hover a:hover,
-.hover a:focus {
+.pr-br {
+	border: .1rem #151C1F solid !important;
+}
+
+
+/* Color Selected Element */
+.hover-color a:hover,
+.hover-color a:focus {
 	color: #FD3253 !important;
 	box-shadow: none !important;
 	text-decoration: none !important;
 	border: none !important;
-
 }
 
-.outline a:hover,
+/* Outline Selected Element */
+.hover-outline a:hover,
 button:hover,
 a:hover, 
-.outline a:focus,
+.hover-outline a:focus,
 :focus {
 	box-shadow: 0 0 0 .2rem #FD3253 !important;
 	outline: none !important;
 }
 
+/* Fill Selected Element Background */
+.hover-fill a:hover,
+.hover-fill a:focus,
+.hover-fill button:hover,
+.hover-fill button:focus {
+	background-color: #FD3253 !important;
+	box-shadow: none !important;
+}
+/* Toggle Hide */
 .hidden {
 	visibility: hidden;
+}
+
+/* Floating Button Top Right */
+.floating_btn {
+	position: fixed;
+	top: 5rem;
+	right: 2.5%;
+	z-index: 100;
 }
 
 /* HTML Tag Styles */
@@ -136,10 +159,12 @@ button {
 .nav_btn_container {
 	margin-bottom: 40vh;
 }
+
 .social_container{
 	height: 1.5rem;
 }
 
+/* Site Icons */
 .social {
 	background-image: url("../img/social/socail_links.svg");
 	background-size: cover;
@@ -150,11 +175,6 @@ button {
 	width: 1.5rem;
 	border-radius: .25rem;
 	margin-right: .5rem;
-}
-
-.social:hover,
-.social:focus {
-	background-color: #FD3253 !important;
 }
 
 .twitter {
@@ -184,17 +204,30 @@ button {
 	background-position:  center top -1.45rem;
 }
 
+.shop_icon {
+	background-position:  center top -3.2rem;
+	
+}
+
+.previous_icon {
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+	background-position:  right .01rem top -4.6rem;
+	margin: -.4rem !important;
+}
+
+.next_icon {
+	-webkit-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+	background-position:  left 1.55rem top -4.6rem;
+}
+
+/* Index */
 .shop_now_btn {
 	margin-top: 68vh;
 }
 
-.filter_btn {
-	position: fixed;
-	top: 4.5rem;
-	right: 2.5%;
-	z-index: 100;
-}
-
+/* Shop */
 .filter_container{
 	text-align: center;
 	position: fixed;
@@ -208,15 +241,20 @@ button {
 	width: auto;
 	background-image: url("../img/site_icons.svg");
 	background-repeat: no-repeat;
-	background-position:  right -2rem top -5.05rem;
+	background-position:  right -2.5rem top -5.05rem;
 	background-size: 7rem 7rem;
     padding: .375rem 2.75rem .375rem .75rem;
     line-height: 1.25;
     background-clip: padding-box;
 	border: none;
-    border-bottom: .2rem solid #151C1F;
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 	font-weight: bold;
+	border-bottom: .25rem solid !important;
+	margin-right: .5rem;
+}
+
+select, option {
+    text-align: right !important;   
 }
 
 .filter_results {
@@ -260,4 +298,70 @@ button {
 .product h4 {
 	color: red;
 	margin-bottom: 0rem;
+}
+
+/* Shoe Info */
+.shoe_info_container {
+	margin-top: 1rem;
+	position: relative;
+/*	height: 90vh;*/
+	background-color: green;
+}
+
+.shoe_header_text {
+	margin-top: 3rem;
+	text-align: center;
+	background-color: aquamarine;
+	width: 100%;
+/*
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 4rem;
+	z-index: 100;
+*/
+}
+
+.shoe_header_text h1 {
+	font-weight: bold;
+	margin-bottom: .1rem
+}
+
+.shoe_header_text h3 {
+	color: red;
+	margin-bottom: .1rem
+}
+
+.main_img {
+	width: 80%;
+}
+
+.img_select_container {
+	width: 100%;
+	margin-top: 1rem
+}
+
+.select_img {
+	width: 10%;
+	margin: .5rem;
+	display: inline-block;
+	border: .1rem black solid;
+	opacity: .1;
+}
+
+.select_img:hover,
+.select_img:focus {
+	opacity: 1 !important;
+}
+
+.carousel-control-next, .carousel-control-prev {
+	margin-left: 10%;
+	margin-right: 10%;
+	opacity: .15 !important;
+}
+
+.carousel-control-next:hover,
+.carousel-control-prev:hover {
+	background-color: rgba(0, 0, 0, .5);
+	box-shadow: none !important;
 }
