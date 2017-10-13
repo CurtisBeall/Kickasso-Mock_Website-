@@ -1,10 +1,17 @@
+/*///////////////////////////////////////////////////////*/
 /* All Elements */
+/*///////////////////////////////////////////////////////*/
 * {
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 /*	border: .02rem green solid;*/
 }
 
+
+
+/*///////////////////////////////////////////////////////*/
 /* Effects */
+/*///////////////////////////////////////////////////////*/
 .wh-tx-a * {
 	color: #f5f5f5 !important;
 }
@@ -45,24 +52,30 @@
 	border: .1rem #151C1F solid !important;
 }
 
+/* Outline Selected Element */
+button:hover,
+a:hover,
+:focus {
+	-webkit-box-shadow: 0 0 0 .2rem #FD3253 !important;
+	box-shadow: 0 0 0 .2rem #FD3253 !important;
+	outline: none !important;
+}
+
+/* Remove Outline Selection On Element */
+.no_outline button:hover,
+.no_outline button:focus {
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+}
 
 /* Color Selected Element */
 .hover-color a:hover,
 .hover-color a:focus {
 	color: #FD3253 !important;
+	-webkit-box-shadow: none !important;
 	box-shadow: none !important;
 	text-decoration: none !important;
 	border: none !important;
-}
-
-/* Outline Selected Element */
-.hover-outline a:hover,
-button:hover,
-a:hover, 
-.hover-outline a:focus,
-:focus {
-	box-shadow: 0 0 0 .2rem #FD3253 !important;
-	outline: none !important;
 }
 
 /* Fill Selected Element Background */
@@ -71,8 +84,8 @@ a:hover,
 .hover-fill button:hover,
 .hover-fill button:focus {
 	background-color: #FD3253 !important;
-	box-shadow: none !important;
 }
+
 /* Toggle Hide */
 .hidden {
 	visibility: hidden;
@@ -84,9 +97,35 @@ a:hover,
 	top: 5rem;
 	right: 2.5%;
 	z-index: 100;
+	background-color: rgba(255, 255, 255, .6)
 }
 
+/* Form Style */
+.form_control {
+	-webkit-appearance: none;
+	background-repeat: no-repeat;
+	background-size: 7rem 7rem;
+    padding: 0rem .1rem .25rem 0rem;
+	margin: 0 !important;
+	margin-top: .25rem;
+    line-height: 1.25;
+    background-clip: padding-box;
+	border: none;
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+	font-weight: bold;
+}
+.btn {
+	border-radius: 0rem !important;
+}
+
+
+
+/*///////////////////////////////////////////////////////*/
 /* HTML Tag Styles */
+/*///////////////////////////////////////////////////////*/
 h1 {
 	font-size: 1.5rem !important;
 }
@@ -109,7 +148,7 @@ h5 {
 }
 
 body {
-	padding: 1rem;
+	padding: 1rem 1rem 0;
 	background-color: #f5f5f5 !important;
 	background-position: center;
 	background-size: 100%;
@@ -132,7 +171,11 @@ button {
 	cursor: pointer;
 }
 
+
+
+/*///////////////////////////////////////////////////////*/
 /* Navigation */
+/*///////////////////////////////////////////////////////*/
 .logo {
 	max-width: 2rem !important;
 }
@@ -164,7 +207,11 @@ button {
 	height: 1.5rem;
 }
 
+
+
+/*///////////////////////////////////////////////////////*/
 /* Site Icons */
+/*///////////////////////////////////////////////////////*/
 .social {
 	background-image: url("../img/social/socail_links.svg");
 	background-size: cover;
@@ -190,8 +237,8 @@ button {
 	background-size: cover;
 	display: inline-block;
 	text-indent: -9999px;
-	height: 1.75rem;
-	width: 1.75rem;
+	height: 1.76rem;
+	width: 1.76rem;
 }
 
 .menu_icon {
@@ -205,56 +252,49 @@ button {
 }
 
 .shop_icon {
-	background-position:  center top -3.2rem;
-	
+	background-position:  right .066rem top -3.195rem;
 }
 
 .previous_icon {
 	-webkit-transform: rotate(90deg);
 	transform: rotate(90deg);
-	background-position:  right .01rem top -4.6rem;
+	background-position:  left 1.6rem top -4.65rem;
 	margin: -.4rem !important;
 }
 
 .next_icon {
 	-webkit-transform: rotate(-90deg);
 	transform: rotate(-90deg);
-	background-position:  left 1.55rem top -4.6rem;
+	background-position:  right 1.6rem top -4.65rem;
 }
 
+
+
+/*///////////////////////////////////////////////////////*/
 /* Index */
+/*///////////////////////////////////////////////////////*/
 .shop_now_btn {
 	margin-top: 68vh;
 }
 
+
+
+/*///////////////////////////////////////////////////////*/
 /* Shop */
+/*///////////////////////////////////////////////////////*/
 .filter_container{
-	text-align: center;
+	text-align: left;
 	position: fixed;
 	padding: .5rem .5rem 1rem .5rem;
     right: 0;
 	z-index: 1000;
+	width: 36%;
 }
 
-.form_control {
-	-webkit-appearance: none;
-	width: auto;
-	background-image: url("../img/site_icons.svg");
-	background-repeat: no-repeat;
-	background-position:  right -2.5rem top -5.05rem;
-	background-size: 7rem 7rem;
-    padding: .375rem 2.75rem .375rem .75rem;
-    line-height: 1.25;
-    background-clip: padding-box;
-	border: none;
-    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-	font-weight: bold;
-	border-bottom: .25rem solid !important;
-	margin-right: .5rem;
-}
-
-select, option {
-    text-align: right !important;   
+.filter_form_control {
+	width: 56%;
+	background-image: url("../img/down_arrow_and_underline.svg");
+	background-position: right .2rem top -2.75rem;
 }
 
 .filter_results {
@@ -279,7 +319,9 @@ select, option {
 
 .product_container:hover,
 .product_container:focus {
+	-webkit-box-shadow: .05rem .05rem .4rem .5rem rgba(0, 0, 0, 0.02);
 	box-shadow: .05rem .05rem .4rem .5rem rgba(0, 0, 0, 0.02);
+	-webkit-filter: brightness(1.04);
 	filter: brightness(1.04);
 }
 
@@ -300,18 +342,20 @@ select, option {
 	margin-bottom: 0rem;
 }
 
+
+
+/*///////////////////////////////////////////////////////*/
 /* Shoe Info */
+/*///////////////////////////////////////////////////////*/
 .shoe_info_container {
-	margin-top: 1rem;
 	position: relative;
 /*	height: 90vh;*/
-	background-color: green;
 }
 
 .shoe_header_text {
-	margin-top: 3rem;
+	margin-top: 3.5rem;
+	margin-bottom: .5rem;
 	text-align: center;
-	background-color: aquamarine;
 	width: 100%;
 /*
 	position: absolute;
@@ -332,21 +376,58 @@ select, option {
 	margin-bottom: .1rem
 }
 
-.main_img {
-	width: 80%;
+.main_img {	
+	width: auto !important;
+	max-width: 100%;
 }
 
 .img_select_container {
 	width: 100%;
-	margin-top: 1rem
+	margin-top: 2.5%;
+}
+
+.carousel {
+	overflow: hidden;
+	width: 100% !important;
+}
+
+.carousel-item {
+    position: relative;
+    display: none;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    transition: -webkit-transform .6s ease;
+    -webkit-transition: -webkit-transform .6s ease;
+    transition: transform .6s ease;
+    transition: transform .6s ease, -webkit-transform .6s ease;
+    transition: transform .6s ease,-webkit-transform .6s ease;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+}
+
+.carousel-control-next, .carousel-control-prev {
+background-color: black;
+    opacity: 0.05 !important;
+}
+
+.carousel-control-next {
+	right: 0 !important;
+}
+
+.carousel-control-prev {
+	left: 0 !important;
 }
 
 .select_img {
-	width: 10%;
-	margin: .5rem;
+	width: 15%;
+	margin: 2.5%;
 	display: inline-block;
-	border: .1rem black solid;
-	opacity: .1;
+	border: .09rem black solid;
+	opacity: .5;
 }
 
 .select_img:hover,
@@ -354,14 +435,43 @@ select, option {
 	opacity: 1 !important;
 }
 
-.carousel-control-next, .carousel-control-prev {
-	margin-left: 10%;
-	margin-right: 10%;
-	opacity: .15 !important;
+.active {
+	opacity: 1;
 }
 
-.carousel-control-next:hover,
-.carousel-control-prev:hover {
-	background-color: rgba(0, 0, 0, .5);
-	box-shadow: none !important;
+.shoe_info {
+	padding: 3rem 0;
 }
+
+.shoe_info_form_control {
+	text-align: center;
+	width: 6rem;
+	height: 2.35rem;
+	background-image: url("../img/site_icons.svg");
+	background-position:  right -1.6rem top -4.95rem;
+	padding: 0 1.5rem;
+	margin-right: -.3rem !important;
+}
+
+.shoe_text {
+	margin: 1rem auto 1rem;
+}
+
+.share_container h4{
+	font-weight: bold;
+	margin-top: 4rem;
+}
+
+.share_container a {
+	background-image: url("../img/social/socail_links_gray.svg");
+	margin-top: .5rem
+}
+
+.modal-lg {
+	max-width: 70vw !important;
+}
+
+/*///////////////////////////////////////////////////////*/
+/* Shoe View */
+/*///////////////////////////////////////////////////////*/
+
