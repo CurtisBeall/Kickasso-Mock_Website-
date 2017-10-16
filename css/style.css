@@ -48,8 +48,8 @@
 	background-color: #dededf !important;
 }
 
-.pr-br {
-	border: .1rem #151C1F solid !important;
+.pr-br-bottom {
+	border-bottom: .1rem #dededf solid!important;
 }
 
 /* Outline Selected Element */
@@ -63,7 +63,9 @@ a:hover,
 
 /* Remove Outline Selection On Element */
 .no_outline button:hover,
-.no_outline button:focus {
+.no_outline button:focus,
+.no_outline a:hover,
+.no_outline a:focus {
 	-webkit-box-shadow: none !important;
 	box-shadow: none !important;
 }
@@ -82,7 +84,9 @@ a:hover,
 .hover-fill a:hover,
 .hover-fill a:focus,
 .hover-fill button:hover,
-.hover-fill button:focus {
+.hover-fill button:focus,
+.hover-fill div:hover,
+.hover-fill div:focus {
 	background-color: #FD3253 !important;
 }
 
@@ -212,60 +216,82 @@ button {
 /*///////////////////////////////////////////////////////*/
 /* Site Icons */
 /*///////////////////////////////////////////////////////*/
-.social {
-	background-image: url("../img/social/socail_links.svg");
+.icon_style *:not(.outer_box) {
 	background-size: cover;
 	background-repeat: no-repeat;
 	display: inline-block;
 	text-indent: -9999px;
 	height: 1.5rem;
 	width: 1.5rem;
-	border-radius: .25rem;
+}
+
+.outer_box {
+	width: 3rem !important;
+	height: 3rem !important;
+	padding: .75rem !important;
+	display: inline-block !important;
+}
+
+.icon_border > * {
+	border: .1rem #151C1F solid !important;
+	margin: -.2rem !important;
+}
+
+/*Social Icons*/
+.social_icons_wh *:not(.outer_box) {
+	background-image: url("../img/social/social_icons_wh.svg");
+	border-radius: .25rem !important;
 	margin-right: .5rem;
 }
 
-.twitter {
-	background-position: 0 -1.5rem;
+.social_icons_gr *:not(.outer_box) {
+	background-image: url("../img/social/social_icons_gr.svg");
 }
 
-.pinterest {
-	background-position: 0 -3.05rem;
+.twitter_icon {
+	background-position: center bottom -1.5rem;
 }
 
-.site_icons {
-	background-image: url("../img/site_icons.svg");
-	background-size: cover;
-	display: inline-block;
-	text-indent: -9999px;
-	height: 1.76rem;
-	width: 1.76rem;
+.pinterest_icon {
+	background-position:  center bottom;
+}
+
+.twitter_icon_gr {
+	background-position: center bottom -1.3rem;
+}
+
+.pinterest_icon_gr {
+	background-position:  center bottom .05rem;
+}
+
+/* Navigation Icons */
+.nav_icons *:not(.outer_box) {
+	background-image: url("../img/nav_icons.svg");
 }
 
 .menu_icon {
-	background-position:  center top;
-	height: 1rem;
-	width: 1rem;
+	background-position: center top .06rem;
+	line-height: 0;
 }
 
 .filter_icon {
-	background-position:  center top -1.45rem;
+	background-position:  center bottom -3rem;
 }
 
 .shop_icon {
-	background-position:  right .066rem top -3.195rem;
+	background-position: center bottom -1.4rem;
 }
 
 .previous_icon {
 	-webkit-transform: rotate(90deg);
 	transform: rotate(90deg);
-	background-position:  left 1.6rem top -4.65rem;
-	margin: -.4rem !important;
+	background-position:  left bottom -.15rem;
 }
 
 .next_icon {
 	-webkit-transform: rotate(-90deg);
 	transform: rotate(-90deg);
-	background-position:  right 1.6rem top -4.65rem;
+	background-position:  left bottom -.15rem;
 }
 
 
@@ -457,14 +483,9 @@ background-color: black;
 	margin: 1rem auto 1rem;
 }
 
-.share_container h4{
+.social_gray h4{
 	font-weight: bold;
 	margin-top: 4rem;
-}
-
-.share_container a {
-	background-image: url("../img/social/socail_links_gray.svg");
-	margin-top: .5rem
 }
 
 .modal-lg {
@@ -472,6 +493,37 @@ background-color: black;
 }
 
 /*///////////////////////////////////////////////////////*/
-/* Shoe View */
+/* About */
 /*///////////////////////////////////////////////////////*/
+.text_container {
+	margin: 3rem auto 0;
+	width: 90%;
+}
 
+.text_container h3 {
+	margin-top: 3rem !important;
+}
+
+
+
+/*///////////////////////////////////////////////////////*/
+/* Contact */
+/*///////////////////////////////////////////////////////*/
+.contact_input div{
+	padding:  1rem;
+}
+
+.contact_input label {
+	margin-top: .3rem;
+	padding: 0;
+	padding-right: 1rem;
+	text-align: right;
+}
+
+.contact_input input {
+	height: 2rem;
+}
+
+#message {
+	height: 20vh;
+}

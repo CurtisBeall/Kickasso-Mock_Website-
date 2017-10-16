@@ -15,37 +15,53 @@
 
 <body>
 	<!-- Header Start -->
-	<header>
+	<header class="wh-bg">
 		<!-- Menu Start -->
-		<div class="menu row">
-			<button class="menu_bt col"><Span></Span>MENU</button>
-			<p class="cart_count row col">0</p><button class="menu_bt col">CART</button>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col p-0">
+					<button class="pr-tx btn cl-bg p-0">
+						<h3 class="icon_style nav_icons menu_icon d-inline-block align-middle">
+					<div class="menu_icon d-inline-block align-middle"></div></h3>
+					<h3 class="d-inline-block align-middle">MENU</h3>
+					</button>
+				</div>
+				<div class="logo col p-0">
+					<div class="align-middle">
+						<a href="file:///C:/Users/Curtis/Documents/Git%20Repos/Kickasso-Mock_Website-/index.html"><img src="img/logo.svg" alt=""></a>
+					</div>
+				</div>
+				<div class="col p-0 text-right">
+					<button class="pr-tx btn cl-bg p-0">
+					<h5 class="cart_count d-inline-block pr-tx gr-bg rounded-circle align-middle" id="cart_count">0</h5>
+					<h3 class="d-inline-block align-middle">CART</h3></button>
+				</div>
+			</div>
 		</div>
 		<!-- Menu End -->
 		<!-- Navigation Start -->
-		<div class="nav_container">
+		<div class="nav_container pr-bg wh-tx-a hidden">
 			<!-- Navigation Buttons Start -->
-			<nav class="nav_container">
-				<h1><a href="" class="nav_item">HOME</a></h1>
-				<h1><a href="" class="nav_item">SHOP</a></h1>
-				<h1><a href="" class="nav_item">ABOUT</a></h1>
-				<h1><a href="" class="nav_item">CONTACT</a></h1>
+			<nav class="nav_btn_container hover-color">
+				<h1><a href="file:///C:/Users/Curtis/Documents/Git%20Repos/Kickasso-Mock_Website-/index.html">HOME</a></h1>
+				<h1><a href="file:///C:/Users/Curtis/Documents/Git%20Repos/Kickasso-Mock_Website-/shop.html">SHOP</a></h1>
+				<h1><a href="file:///C:/Users/Curtis/Documents/Git%20Repos/Kickasso-Mock_Website-/about.html">ABOUT</a></h1>
+				<h1><a href="file:///C:/Users/Curtis/Documents/Git%20Repos/Kickasso-Mock_Website-/contact.html">CONTACT</a></h1>
 			</nav>
 			<!-- Navigation Buttons End -->
 			<!-- Policy Start -->
-			<div class="policy_container">
-				<a href="">RETURN POLICY</a>
-				<a href="">DISCLAIMER</a>
+			<div class="mb-5 hover-color">
+				<h5><a href="file:///C:/Users/Curtis/Documents/Git%20Repos/Kickasso-Mock_Website-/policy.html">RETURN POLICY</a></h5>
+				<h5><a href="file:///C:/Users/Curtis/Documents/Git%20Repos/Kickasso-Mock_Website-/disclaimer.html">DISCLAIMER</a></h5>
 			</div>
 			<!-- Policy End -->
 			<!-- Social Icon Start -->
-			<div class="social_container">
-				<a href=""><img src="" alt="Facebook Logo" class="socail_icon"></a>
-				<a href=""><img src="" alt="Twitter Logo" class="socail_icon"></a>
-				<a href=""><img src="" alt="Pinterest Logo" class="socail_icon"></a>
+			<div class="icon_style social_icons_wh hover-fill">
+				<a href="https://www.facebook.com/Kickassoart/">Facebook</a>
+				<a href="https://twitter.com/K_obrand" class="twitter_icon">Twitter</a>
+				<a href="https://www.pinterest.com/" class="pinterest_icon">Pinterest</a>
 			</div>
 			<!-- Social Icon End -->
-
 		</div>
 		<!-- Navigation End -->
 	</header>
@@ -53,25 +69,42 @@
 	<!-- Main Start -->
 	<main>
 		<!-- Contact Header Start -->
-		<h1>CONTACT</h1>
-		<div class="social_container">
-			<a href=""><img src="" alt="Facebook Logo" class="socail_icon"></a>
-			<a href=""><img src="" alt="Twitter Logo" class="socail_icon"></a>
-			<a href=""><img src="" alt="Pinterest Logo" class="socail_icon"></a>
+		<div class="text-center mt-3">
+			<h1>CONTACT</h1>
+			<div class="icon_style social_icons_gr icon_border no_outline mt-4 hover-fill">
+				<div class="outer_box"><a href="https://www.facebook.com/Kickassoart/">Facebook</a></div>
+				<div class="outer_box"><a href="https://twitter.com/K_obrand" class="twitter_icon">Twitter</a></div>
+				<div class="outer_box"><a href="https://www.pinterest.com/" class="pinterest_icon">Pinterest</a></div>
+			</div>
 		</div>
 		<!-- Contact Header End -->
 		<!-- Contact Filed Start -->
-		<div class="filed_container">
-			<label for="name">Name</label><input type="text" id="name">
-			<label for="email">Email</label><input type="text" id="email">
-			<label for="subject">Subject</label><input type="text" id="subject">
-			<label for="messsage">Message</label><input type="text" id="message">
-			<div class="spam_check">
-				<label for="spam_check">Spam check</label><input type="text" id="spam_check">
-				<img src="" alt="Hard to read image to help prevent spam.">
-				<h5>Please enter the characters from the image.</h5>
+		<div class="contact_input mb-5">
+			<div class="pr-br-bottom">
+				<h4 class="row m-0"><label class="col-3" for="name">Name</label><input class="col" type="text" id="name"></h4>
 			</div>
-			<button class="contact_bt">Send</button>
+			<div class="pr-br-bottom">
+				<h4 class="row m-0"><label class="col-3" for="email">Email</label><input class="col" type="text" id="email"></h4>
+			</div>
+			<div class="pr-br-bottom">
+				<h4 class="row m-0"><label class="col-3" for="subject">Subject</label><input class="col" type="text" id="subject"></h4>
+			</div>
+			<div class="pr-br-bottom">
+				<h4 class="row m-0"><label class="col-3" for="messsage">Message</label><input class="col" type="text" id="message"></h4>
+			</div>
+			<div class="pr-br-bottom">
+				<h4 class="row m-0">
+					<label class="col-3" for="spam_check">Spam check</label>
+					<div class="col p-0">
+						<div class="col m-0 p-0 row">
+							<input class="col p-0" type="text" id="spam_check">
+							<img src="img/509097019.png" alt="Hard to read image to help prevent spam." class="col p-0">
+						</div>
+						<h5>Please enter the characters from the image.</h5>
+					</div>
+				</h4>
+			</div>
+			<button class="w-100 wh-tx btn pr-bg">Send</button>
 		</div>
 		<!-- Contact Filed End -->
 	</main>
