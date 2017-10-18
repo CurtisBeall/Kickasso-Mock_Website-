@@ -105,22 +105,6 @@ a:hover,
 }
 
 /* Form Style */
-.form_control {
-	-webkit-appearance: none;
-	background-repeat: no-repeat;
-	background-size: 7rem 7rem;
-    padding: 0rem .1rem .25rem 0rem;
-	margin: 0 !important;
-	margin-top: .25rem;
-    line-height: 1.25;
-    background-clip: padding-box;
-	border: none;
-    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-    transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-	font-weight: bold;
-}
 .btn {
 	border-radius: 0rem !important;
 }
@@ -158,7 +142,7 @@ body {
 	background-size: 100%;
 	background-repeat: no-repeat;
 	margin-top: 2rem !important;
-
+	height: 90vh;
 }
 
 header {
@@ -185,7 +169,7 @@ button {
 }
 
 .cart_count {
-	padding: .1rem .38rem .2rem;
+	padding: .1rem .25rem .2rem;
 	margin: 0;
 	margin-right: .5rem;
 }
@@ -205,6 +189,10 @@ button {
 
 .nav_btn_container {
 	margin-bottom: 40vh;
+}
+
+.policy_container {
+	margin-bottom: 3rem
 }
 
 .social_container{
@@ -275,7 +263,7 @@ button {
 }
 
 .filter_icon {
-	background-position:  center bottom -3rem;
+	background-position:  center bottom -2.7rem;
 }
 
 .shop_icon {
@@ -300,7 +288,7 @@ button {
 /* Index */
 /*///////////////////////////////////////////////////////*/
 .shop_now_btn {
-	margin-top: 68vh;
+	padding-top: 51vh;
 }
 
 
@@ -314,26 +302,47 @@ button {
 	padding: .5rem .5rem 1rem .5rem;
     right: 0;
 	z-index: 1000;
-	width: 36%;
+	width: 35%;
 }
 
 .filter_form_control {
-	width: 56%;
+	-webkit-appearance: none;
+	background-repeat: no-repeat;
+	background-size: 7rem 7rem;
+    padding: 0rem .1rem .25rem 0rem;
+	margin: 0 !important;
+	margin-top: .25rem;
+    background-clip: padding-box;
+	border: none;
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+	font-weight: bold;
+	width: 55%;
 	background-image: url("../img/down_arrow_and_underline.svg");
 	background-position: right .2rem top -2.75rem;
+	background-position: right .2rem top -2.75rem;
+	background-position: right .2rem top .09rem;
+	background-position: right top 100%;
+	background-size: 15rem;
 }
 
 .filter_results {
 	margin-top: 1rem;
 }
 
+
+.filter_results a {
+	color: #151C1F !important;
+}
+
 .product_container {
-	width: 49vh;
-	height: 49vh;
+	width: calc(100%/3*.9);
+	height: 100%;
+	padding-top: calc(100%*.75/3); 
 	min-width: 15rem;
 	min-height: 15rem;
-	max-width: 40rem;
-	max-height: 40rem;
 	background-position: center top -1rem;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -365,6 +374,7 @@ button {
 
 .product h4 {
 	color: red;
+	margin-top: .5rem;
 	margin-bottom: 0rem;
 }
 
@@ -375,7 +385,7 @@ button {
 /*///////////////////////////////////////////////////////*/
 .shoe_info_container {
 	position: relative;
-/*	height: 90vh;*/
+	height: 90vh;
 }
 
 .shoe_header_text {
@@ -383,13 +393,6 @@ button {
 	margin-bottom: .5rem;
 	text-align: center;
 	width: 100%;
-/*
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 4rem;
-	z-index: 100;
-*/
 }
 
 .shoe_header_text h1 {
@@ -403,8 +406,7 @@ button {
 }
 
 .main_img {	
-	width: auto !important;
-	max-width: 100%;
+	width: 100% !important;
 }
 
 .img_select_container {
@@ -481,19 +483,19 @@ background-color: black;
 
 .shoe_text {
 	margin: 1rem auto 1rem;
-}
-
-.social_gray h4{
-	font-weight: bold;
-	margin-top: 4rem;
+	padding: 0 1rem;
+	text-align: left;
 }
 
 .modal-lg {
-	max-width: 70vw !important;
+	max-width: 95vw !important;
+	margin: .5rem auto !important;
 }
 
+
+
 /*///////////////////////////////////////////////////////*/
-/* About */
+/* About / Disclaimer / Return Policy */
 /*///////////////////////////////////////////////////////*/
 .text_container {
 	margin: 3rem auto 0;
@@ -501,7 +503,7 @@ background-color: black;
 }
 
 .text_container h3 {
-	margin-top: 3rem !important;
+	margin: 3rem 0 !important;
 }
 
 
@@ -509,8 +511,12 @@ background-color: black;
 /*///////////////////////////////////////////////////////*/
 /* Contact */
 /*///////////////////////////////////////////////////////*/
+.contact_input {
+	padding: 0 5%;
+}
+
 .contact_input div{
-	padding:  1rem;
+	padding:  1rem 5%;
 }
 
 .contact_input label {
@@ -518,6 +524,7 @@ background-color: black;
 	padding: 0;
 	padding-right: 1rem;
 	text-align: right;
+	max-width: 31% !important;
 }
 
 .contact_input input {
@@ -526,4 +533,292 @@ background-color: black;
 
 #message {
 	height: 20vh;
+}
+
+.spam_img {
+	max-width: 40% !important;
+}
+
+
+
+/*///////////////////////////////////////////////////////*/
+/* Media Query */
+/*///////////////////////////////////////////////////////*/
+
+/* Max-Width: 325px and Orientation: Landscape */
+@media screen and (max-width: 625px) and (orientation: landscape) {
+	/* Index */
+	.shop_now_btn {
+		padding-top: 70vh;
+	}
+	
+	/* Shoe Info */
+	.row .carousel {
+		width: 25rem !important;
+		margin: 0 auto;
+	}
+	
+	/* Contact */
+	.contact_input {
+		padding: 0 5%;
+	}
+
+	.spam_img {
+		max-width: 50% !important;
+	}
+}
+
+
+
+/* Min-Width: 625px */
+@media screen and (min-width: 625px), screen and (min-height: 625px) {
+	/* HTML Tag Styles */
+	h1 {
+		font-size: 1.75rem !important;
+	}
+	
+	/* Navigation */
+	.logo {
+		max-width: 2.5rem !important;
+	}
+
+		/* Index */
+	.shop_now_btn {
+		padding-top: 60vh;
+	}
+	
+	/* About / Disclaimer / Return Policy */
+	.text_container {
+		width: 80%;
+	}
+
+.text_container h3 {
+	margin: 3rem 0 !important;
+}
+		
+	/* Contact */
+	.contact_input {
+		padding: 0 10%;
+	}
+
+	.contact_input div{
+		padding:  1rem 10%;
+	}
+
+	.contact_input label {
+		max-width: 20% !important;
+	}
+	
+	.spam_img {
+		max-width: 30% !important;
+	}
+}
+
+
+
+/* Min-Width: 925px */
+@media screen and (min-width: 925px) {
+	/* HTML Tag Styles */
+	h1 {
+		font-size: 2.75rem !important;
+	}
+
+	h2 {
+		font-size: 1.5rem !important;
+	}
+
+	h3 {
+		font-size: 1.25rem !important;
+		margin: 0rem !important;
+	}
+
+	h4 {
+		font-size: 1rem !important;
+	}
+
+	h5 {
+		font-size: .75rem !important;
+	}
+	
+	/* Navigation */
+	.logo {
+		max-width: 3rem !important;
+	}	
+	
+	.nav_btn_container {
+		margin-bottom: 55vh;
+	}
+	
+	.social_container{
+		height: 1.5rem;
+	}
+	
+	/* Shop	*/
+	.filter_container{
+		width: 26%;
+	}
+	
+	/*	Shoe Info */
+	.shoe_header_text {
+		margin-top: 0rem;		
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 4rem;
+		z-index: 100;
+	}
+	
+	.shoe_info_container .col-m {
+		padding: 10rem 0 5rem; 
+	}
+	
+	.shoe_text {
+		height: 85%;
+		margin: 0 5rem;
+	}
+	
+	.shoe_text h4{
+		position: relative;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%); 
+	}
+	
+	.col-m {
+		-ms-flex-preferred-size: 0;
+		flex-basis: 0;
+		-ms-flex-positive: 1;
+		-webkit-box-flex: 1;
+		flex-grow: 1;
+		max-width: 100%;
+	}
+	
+	/* Contact */
+	.contact_input {
+		padding: 0 15%;
+	}
+
+	.contact_input div{
+		padding:  1.5rem 10%;
+	}
+	
+	.spam_img {
+		max-width: 25% !important;
+	}
+}
+
+
+
+/* Min-Width: 1225px */
+@media screen and (min-width: 1225px) {
+	
+	/* HTML Tag Styles */
+	h1 {
+		font-size: 2.75rem !important;
+	}
+
+	h2 {
+		font-size: 1.5rem !important;
+	}
+
+	h3 {
+		font-size: 1.25rem !important;
+		margin: 0rem !important;
+	}
+
+	h4 {
+		font-size: 1rem !important;
+	}
+
+	h5 {
+		font-size: .75rem !important;
+	}
+		
+	/* Shop	*/
+	.filter_container{
+		width: 20%;
+	}
+	
+	/* About / Disclaimer / Return Policy */
+	.text_container {
+		width: 70%;
+	}
+	
+	/* Contact */
+	.contact_input {
+		padding: 0 15%;
+	}
+
+	.contact_input div{
+		padding:  2rem 15%;
+	}
+
+}
+
+/* Min-Width: 1825px */
+@media screen and (min-width: 1825px) {
+	
+	/* HTML Tag Styles */
+	h1 {
+		font-size: 3.75rem !important;
+	}
+
+	h2 {
+		font-size: 1.75rem !important;
+	}
+
+	h3 {
+		font-size: 1.5rem !important;
+		margin: 0rem !important;
+	}
+
+	h4 {
+		font-size: 1.25rem !important;
+	}
+
+	h5 {
+		font-size: 1rem !important;
+	}
+	
+	body {
+	background-size: cover;
+	}
+	
+	/* Navigation */
+	.nav_btn_container {
+		margin-bottom: 54vh;
+	}
+
+	.nav_container {
+		padding: 12rem 8rem;
+	}
+
+	.policy_container {
+		margin-bottom: 6rem
+	}
+
+	/* Shop	*/
+	.filter_container{
+		width: 16%;
+	}
+		
+	/*	Shoe Info */
+	.shoe_info_container .col-m {
+		padding-top: 12rem; 
+	}
+	
+	/* About / Disclaimer / Return Policy */
+	.text_container {
+		width: 60%;
+	}
+	
+	/* Contact */
+	.contact_input {
+		padding: 0 20%;
+	}
+
+	.contact_input div{
+		padding:  2rem 20%;
+	}
+
 }
