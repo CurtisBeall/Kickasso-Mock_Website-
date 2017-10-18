@@ -165,7 +165,10 @@ button {
 /* Navigation */
 /*///////////////////////////////////////////////////////*/
 .logo {
-	max-width: 2rem !important;
+	max-width: 5% !important;
+	width: 100%;
+	min-width: 2rem !important;
+	margin: auto;
 }
 
 .cart_count {
@@ -182,20 +185,28 @@ button {
 	min-width: 11rem;
 	max-width: 30%;
 	height: auto;
-	padding: 3rem 2rem;
+	max-height: 100vh;
+	padding: 3vh 2vw;
 	overflow: scroll;
+	-webkit-transform: translateX(-5%);
+	transform: translateX(-5%)
 	z-index: 1000;
 }
 
-.nav_btn_container {
-	margin-bottom: 40vh;
+.nav_element_container {
+	position: relative;
+	height: 100%;
+	min-height: 25rem;
 }
 
 .policy_container {
-	margin-bottom: 3rem
+	position: absolute;
+	bottom: 4rem;
 }
 
 .social_container{
+	position: absolute;
+	bottom: 1rem;
 	height: 1.5rem;
 }
 
@@ -288,7 +299,18 @@ button {
 /* Index */
 /*///////////////////////////////////////////////////////*/
 .shop_now_btn {
-	padding-top: 51vh;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%); 
+	width: 100%;
+}
+
+.shop_now_btn a{
+	margin-top: 45%;
+	width: 100%;
+	max-width: 45vw;
+	padding: 3%;
 }
 
 
@@ -547,11 +569,6 @@ background-color: black;
 
 /* Max-Width: 325px and Orientation: Landscape */
 @media screen and (max-width: 625px) and (orientation: landscape) {
-	/* Index */
-	.shop_now_btn {
-		padding-top: 70vh;
-	}
-	
 	/* Shoe Info */
 	.row .carousel {
 		width: 25rem !important;
@@ -577,24 +594,14 @@ background-color: black;
 		font-size: 1.75rem !important;
 	}
 	
-	/* Navigation */
-	.logo {
-		max-width: 2.5rem !important;
-	}
-
-		/* Index */
-	.shop_now_btn {
-		padding-top: 60vh;
-	}
-	
 	/* About / Disclaimer / Return Policy */
 	.text_container {
 		width: 80%;
 	}
 
-.text_container h3 {
-	margin: 3rem 0 !important;
-}
+	.text_container h3 {
+		margin: 3rem 0 !important;
+	}
 		
 	/* Contact */
 	.contact_input {
@@ -639,18 +646,11 @@ background-color: black;
 	h5 {
 		font-size: .75rem !important;
 	}
-	
-	/* Navigation */
-	.logo {
-		max-width: 3rem !important;
-	}	
-	
-	.nav_btn_container {
-		margin-bottom: 55vh;
-	}
-	
-	.social_container{
-		height: 1.5rem;
+	/*	Index	*/
+	.shop_now_btn a{
+		max-width: 25rem;
+		padding: 2rem;
+		margin-bottom: 2rem;
 	}
 	
 	/* Shop	*/
@@ -734,6 +734,26 @@ background-color: black;
 		font-size: .75rem !important;
 	}
 		
+	body {
+		background-position: center top -9rem !important;	
+	}
+	
+	/* Navigation */
+	.nav_container {
+		height: 100vh;
+		overflow: hidden;
+	}
+	
+	/* Index */
+	.shop_now_btn {
+		position: static;
+		margin-top: 45%;
+	}
+
+	.shop_now_btn a{
+		margin-top: 0%;
+	}
+	
 	/* Shop	*/
 	.filter_container{
 		width: 20%;
@@ -780,23 +800,6 @@ background-color: black;
 		font-size: 1rem !important;
 	}
 	
-	body {
-	background-size: cover;
-	}
-	
-	/* Navigation */
-	.nav_btn_container {
-		margin-bottom: 54vh;
-	}
-
-	.nav_container {
-		padding: 12rem 8rem;
-	}
-
-	.policy_container {
-		margin-bottom: 6rem
-	}
-
 	/* Shop	*/
 	.filter_container{
 		width: 16%;
