@@ -49,7 +49,7 @@
 }
 
 .pr-br-bottom {
-	border-bottom: .1rem #dededf solid!important;
+	border-bottom: .1rem #151C1F solid!important;
 }
 
 /* Outline Selected Element */
@@ -90,6 +90,11 @@ a:hover,
 	background-color: #FD3253 !important;
 }
 
+/* Fill Selected Element Background */
+.fill  {
+	background-color: #FD3253 !important;
+}
+
 /* Toggle Hide */
 .hidden {
 	visibility: hidden;
@@ -109,7 +114,10 @@ a:hover,
 	border-radius: 0rem !important;
 }
 
-
+/* Get Width For JS */
+#remove {
+	display: inline;
+}
 
 /*///////////////////////////////////////////////////////*/
 /* HTML Tag Styles */
@@ -164,11 +172,18 @@ button {
 /*///////////////////////////////////////////////////////*/
 /* Navigation */
 /*///////////////////////////////////////////////////////*/
-.logo {
-	max-width: 5% !important;
+.logo a{
+	max-width: 15% !important;
 	width: 100%;
 	min-width: 2rem !important;
-	margin: auto;
+	height: auto;
+	margin: 0 auto;
+	display: inline-block;
+	background-image: url(../img/logo.svg);
+}
+.test {
+		background-color: aquamarine;
+	height: 
 }
 
 .cart_count {
@@ -321,17 +336,18 @@ button {
 .filter_container{
 	text-align: left;
 	position: fixed;
-	padding: .5rem .5rem 1rem .5rem;
+	padding: .5rem 2.5rem 1rem .5rem;
+	top: 6rem;
     right: 0;
 	z-index: 1000;
-	width: 35%;
+	width: auto;
 }
 
 .filter_form_control {
 	-webkit-appearance: none;
 	background-repeat: no-repeat;
 	background-size: 7rem 7rem;
-    padding: 0rem .1rem .25rem 0rem;
+    padding: 0rem 0rem .25rem 0rem;
 	margin: 0 !important;
 	margin-top: .25rem;
     background-clip: padding-box;
@@ -343,9 +359,6 @@ button {
 	font-weight: bold;
 	width: 55%;
 	background-image: url("../img/down_arrow_and_underline.svg");
-	background-position: right .2rem top -2.75rem;
-	background-position: right .2rem top -2.75rem;
-	background-position: right .2rem top .09rem;
 	background-position: right top 100%;
 	background-size: 15rem;
 }
@@ -653,11 +666,28 @@ background-color: black;
 		margin-bottom: 2rem;
 	}
 	
-	/* Shop	*/
-	.filter_container{
-		width: 26%;
+	/* Shop */
+		
+	.filter {
+		visibility: hidden;
 	}
 	
+	.filter_container {
+		text-align: center;
+		position: static;
+		padding: 1.5rem 0 1rem 0;
+		z-index: 1000;
+		width: 100%;
+		background-color: transparent!important;
+		visibility: visible;
+	}
+	
+	.filter_container div{
+		display: inline-block;
+		margin: 0 1rem !important;
+	}
+	
+		
 	/*	Shoe Info */
 	.shoe_header_text {
 		margin-top: 0rem;		
@@ -753,11 +783,7 @@ background-color: black;
 	.shop_now_btn a{
 		margin-top: 0%;
 	}
-	
-	/* Shop	*/
-	.filter_container{
-		width: 20%;
-	}
+
 	
 	/* About / Disclaimer / Return Policy */
 	.text_container {
@@ -798,11 +824,6 @@ background-color: black;
 
 	h5 {
 		font-size: 1rem !important;
-	}
-	
-	/* Shop	*/
-	.filter_container{
-		width: 16%;
 	}
 		
 	/*	Shoe Info */

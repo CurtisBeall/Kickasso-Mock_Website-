@@ -26,10 +26,8 @@
 					<h3 class="d-inline-block align-middle">MENU</h3>
 					</button>
 				</div>
-				<div class="logo col p-0">
-					<div class="align-middle">
-						<a href="file:///C:/Users/Curtis/Documents/Git%20Repos/Kickasso-Mock_Website-/index.html"><img src="img/logo.svg" alt=""></a>
-					</div>
+				<div class="col p-0 logo_container">
+					<a href="file:///C:/Users/Curtis/Documents/Git%20Repos/Kickasso-Mock_Website-/index.html" class="logo align-middle"></a>
 				</div>
 				<div class="col p-0 text-right">
 					<button class="pr-tx btn cl-bg p-0">
@@ -71,7 +69,7 @@
 	<!-- Main Start -->
 	<main>
 		<!-- Filter Button Start -->
-		<div class="floating_btn icon_style nav_icons p-0 text-center icon_border no_outline hover-fill">
+		<div class="filter floating_btn icon_style nav_icons p-0 text-center icon_border no_outline hover-fill">
 			<button class="filter_icon pr-tx btn cl-bg p-0 m-0 d-inline-block" id="filter_btn"><h3>Filter</h3></button>
 		</div>
 		<!-- Filter Button End -->
@@ -79,59 +77,63 @@
 		<div class="filter_container m-0 mt-3 wh-bg hidden" id="filter">
 			<!-- Show Me Dropdown Start -->
 			<div class="gr-tx m-0 p-0">
-				<h3><label for="show_me">SHOW ME</label>
+				<h3>
+					<label for="show_me">SHOW ME</label>
 					<select class="form_control filter_form_control cl-bg pr-tx" id="show_me">
-					<option>ALL</option>		
-					<option>SNEAKERS</option>
-					<option>SANDALS</option>
-				</select></h3>
+						<option>ALL</option>		
+						<option>SNEAKERS</option>
+						<option>SANDALS</option>
+					</select>
+				</h3>
 			</div>
 			<!-- Show Me Dropdown End -->
 			<!-- Size Dropdown Start -->
 			<div class="gr-tx m-0 p-0">
-				<h3><label for="size">SIZE</label>
+				<h3>
+					<label for="size">SIZE</label>
 					<select class="form_control filter_form_control cl-bg pr-tx" id="size">
-					<option>ALL</option>		
-					<option>12</option>
-					<option>11</option>
-					<option>10</option>
-					<option>9</option>
-			</select></h3>
+						<option>ALL</option>		
+						<option>12</option>
+						<option>11</option>
+						<option>10</option>
+						<option>9</option>
+					</select>
+				</h3>
 			</div>
 			<!-- Size Dropdown End -->
 			<!-- Sort By Dropdown Start -->
 			<div class="gr-tx m-0 p-0">
 				<h3><label for="sort">SORT BY</label>
-					<span><select class="form_control filter_form_control cl-bg pr-tx" id="sort"><div>test</div>
-					<option>PRICE</option>
-					<option>TYPE</option>
-			</select></span></h3>
+					<span>
+						<select class="form_control filter_form_control cl-bg pr-tx" id="sort"><div>test</div>
+							<option>PRICE</option>
+							<option>TYPE</option>
+						</select>
+					</span>
+				</h3>
 			</div>
 			<!-- Sort By Dropdown End -->
 		</div>
-
-		<div>
-		</div>
 		<!-- Filter End -->
 		<!-- Filter Results Start -->
-		<div class="filter_results text-center no_outline">
-			<a href="http://127.0.0.1:52639/shoe_info_donut_dreams.html">
+		<div class="filter_results text-center no_outline" id="removetext">
+			<a href="file:///C:/Users/Curtis/Documents/Git%20Repos/Kickasso-Mock_Website-/shoe_info_donut_dreams.html">
 				<div class="product_container" style="background-image: url('img/products/donut_dreams/IMG_1954.jpg')">
 					<div class="product">
-						<h3>Donut Dreams</h3>
+						<h3>DONUT DREAMS</h3>
 						<h4>$130.00</h4>
 					</div>
 				</div>
 			</a>
-			<a href="http://127.0.0.1:52639/shoe_info_freddy_kreuger.html">
+			<a href="file:///C:/Users/Curtis/Documents/Git%20Repos/Kickasso-Mock_Website-/shoe_info_freddy_kreuger.html">
 				<div class="product_container" style="background-image: url('img/products/freddy_kreuger/M16A4527.jpg')">
 					<div class="product">
-						<h3>Freddy Kreuger</h3>
+						<h3>FREDDY KREUGER</h3>
 						<h4>$400.00</h4>
 					</div>
 				</div>
 			</a>
-			<a href="http://127.0.0.1:52639/shoe_info_luxury_force_1_black.html">
+			<a href="file:///C:/Users/Curtis/Documents/Git%20Repos/Kickasso-Mock_Website-/shoe_info_luxury_force_1_black.html">
 				<div class="product_container" style="background-image: url('img/products/luxury_force_1_black/M16A7498-2.jpg')">
 					<div class="product">
 						<h3>LUXURY FORCE 1 BLACK</h3>
@@ -139,7 +141,7 @@
 					</div>
 				</div>
 			</a>
-			<a href="http://127.0.0.1:52639/shoe_info_adidas_akatsuki_slide.html">
+			<a href="file:///C:/Users/Curtis/Documents/Git%20Repos/Kickasso-Mock_Website-/shoe_info_adidas_akatsuki_slide.html">
 				<div class="product_container" style="background-image: url('img/products/adidas_akatsuki_slide/M16A4862-2.jpg')">
 					<div class="product">
 						<h3>ADIDAS AKATSUKI SLIDE</h3>
@@ -147,7 +149,7 @@
 					</div>
 				</div>
 			</a>
-			<a href="http://127.0.0.1:52639/shoe_info_super_mario_sb_dunk_low.html">
+			<a href="file:///C:/Users/Curtis/Documents/Git%20Repos/Kickasso-Mock_Website-/shoe_info_super_mario_sb_dunk_low.html">
 				<div class="product_container" style="background-image: url('img/products/super_mario_sb_dunk_low/image.jpg')">
 					<div class="product">
 						<h3>SUPER MARIO SB DUNK LOW</h3>
@@ -155,8 +157,8 @@
 					</div>
 				</div>
 			</a>
-			<a href="http://127.0.0.1:52639/shoe_info_adidas_akatsuki_slide.html">
-				<div class="product_container" style="background-image: url('img/products/adidas_akatsuki_slide/M16A4862-2.jpg')">
+			<a href="file:///C:/Users/Curtis/Documents/Git%20Repos/Kickasso-Mock_Website-/shoe_info_trusssssst_me_nike_slide.html">
+				<div class="product_container" style="background-image: url('img/products/trusssssst_me_nike_slide/product_image.jpg')">
 					<div class="product">
 						<h3>TRUSSSSST ME GUCCI SLIDE</h3>
 						<h4>$550.00</h4>
@@ -170,5 +172,7 @@
 
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="js/shoe_list.js"></script>
 <script src="js/script.js"></script>
+
 </html>
