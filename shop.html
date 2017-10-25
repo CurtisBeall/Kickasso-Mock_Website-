@@ -19,8 +19,8 @@
 		<!-- Menu Start -->
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col p-0">
-					<button class="pr-tx btn cl-bg p-0" id="menu_btn">
+				<div class="col p-0 ">
+					<button class="pr-tx btn cl-bg p-0 middle" id="menu_btn">
 						<h3 class="icon_style nav_icons menu_icon d-inline-block align-middle">
 					<div class="menu_icon d-inline-block align-middle"></div></h3>
 					<h3 class="d-inline-block align-middle">MENU</h3>
@@ -30,9 +30,10 @@
 					<a href="file:///C:/Users/Curtis/Documents/Git%20Repos/Kickasso-Mock_Website-/index.html" class="logo align-middle"></a>
 				</div>
 				<div class="col p-0 text-right">
-					<button class="pr-tx btn cl-bg p-0">
+					<button class="pr-tx btn cl-bg p-0 middle">
 					<h5 class="cart_count d-inline-block pr-tx gr-bg rounded-circle align-middle" id="cart_count">0</h5>
-					<h3 class="d-inline-block align-middle">CART</h3></button>
+					<h3 class="d-inline-block align-middle">CART</h3>
+					</button>
 				</div>
 			</div>
 		</div>
@@ -74,12 +75,12 @@
 		</div>
 		<!-- Filter Button End -->
 		<!-- Filter Start -->
-		<div class="filter_container m-0 mt-3 wh-bg hidden" id="filter">
+		<div class="filter_container m-0 wh-bg hidden" id="filter">
 			<!-- Show Me Dropdown Start -->
 			<div class="gr-tx m-0 p-0">
 				<h3>
 					<label for="show_me">SHOW ME</label>
-					<select class="form_control filter_form_control cl-bg pr-tx" id="show_me">
+					<select class="filter_form_control cl-bg pr-tx" id="show_me">
 						<option>ALL</option>		
 						<option>SNEAKERS</option>
 						<option>SANDALS</option>
@@ -91,7 +92,7 @@
 			<div class="gr-tx m-0 p-0">
 				<h3>
 					<label for="size">SIZE</label>
-					<select class="form_control filter_form_control cl-bg pr-tx" id="size">
+					<select class="filter_form_control cl-bg pr-tx" id="size">
 						<option>ALL</option>		
 						<option>12</option>
 						<option>11</option>
@@ -103,20 +104,19 @@
 			<!-- Size Dropdown End -->
 			<!-- Sort By Dropdown Start -->
 			<div class="gr-tx m-0 p-0">
-				<h3><label for="sort">SORT BY</label>
-					<span>
-						<select class="form_control filter_form_control cl-bg pr-tx" id="sort"><div>test</div>
-							<option>PRICE</option>
-							<option>TYPE</option>
-						</select>
-					</span>
+				<h3>
+					<label for="sort">SORT BY</label>
+					<select class="filter_form_control cl-bg pr-tx" id="sort"><div>test</div>
+						<option>PRICE</option>
+						<option>NAME</option>
+					</select>
 				</h3>
 			</div>
 			<!-- Sort By Dropdown End -->
 		</div>
 		<!-- Filter End -->
 		<!-- Filter Results Start -->
-		<div class="filter_results text-center no_outline" id="removetext">
+		<div class="filter_results text-center no_outline" id="filterResults">
 			<a href="file:///C:/Users/Curtis/Documents/Git%20Repos/Kickasso-Mock_Website-/shoe_info_donut_dreams.html">
 				<div class="product_container" style="background-image: url('img/products/donut_dreams/IMG_1954.jpg')">
 					<div class="product">
