@@ -4,28 +4,59 @@
 window.onload = (function () {
 	//Set Cart Count
 	cartCount()
-	
+
 	//Set Cart Count
 	$("#cart_count").text(cartCount)
-	
+
 	//Sort products and create new results list on Shop page
 	if (window.location.href.indexOf("shop") > -1) {
 		sortBy();
 		newResultList();
 	}
-	
+
 	//Filter select box setup on Shop and Shoe Info pages
 	if (window.location.href.indexOf("shop") > -1 || window.location.href.indexOf("shoe_info") > -1) {
 		$("select").click();
 		filterUnderlineOnload();
 	}
-	
+
+	//Prevent carousel from rotating automatically on Shoe Info pages
+	if (window.location.href.indexOf("shoe_info") > -1) {
+		preventCarousel();
+	}
+
 	//Fill cart on Cart page
 	if (window.location.href.indexOf("cart") > -1) {
 		fillCart();
 	}
 });
 
+
+
+//////////////////////////////
+//Carousel JavaScript
+//////////////////////////////
+//Prevent carousel from rotating automatically
+function preventCarousel() {
+	$('.carousel').carousel("pause")
+}
+
+//Make main image and thumbnails match
+function updateActive() {
+	let imageMain = $(".carousel").find(".active").find("img").attr("src");
+	let imageThumb = $(".img_select_container").find(".active").attr("src");
+
+	if (imageMain !== imageThumb) {
+		$(".img_select_container").find(".active").removeClass("active");
+		let test = $(".img_select_container").find("img");
+
+		for (var i = 0; i < test.length; i++) {
+			if (imageMain === $(test[i]).attr("src")) {
+				$(test[i]).addClass("active");
+			}
+		}
+	}
+}
 
 //////////////////////////////
 //Menu Toggle
@@ -84,7 +115,7 @@ $("#filter_btn").keyup(function (e) {
 //Esc Press Close
 $(document).keyup(function (e) {
 	if (e.keyCode === 27 && $("#filter").removeClass("hidden")) {
-		mouseClickToggle();
+		$(document).click();
 	}
 });
 
@@ -101,7 +132,12 @@ $("select").click(function () {
 	removetext.innerHTML += "<h3 style='font-weight: bold;'><div id='remove'>" + textLength + "</div></h3>";
 	let width = $("#remove").width();
 	$("#remove").remove();
-	$(this).css("width", Math.ceil(width / 5) * 5 + 25 + "px");
+	//Filter select box setup on Shop and Shoe Info pages
+	if (window.location.href.indexOf("shoe_info") > -1) {
+		$(this).css("width", Math.ceil(width / 5) * 5 + 85 + "px");
+	} else if (window.location.href.indexOf("shop" > -1)) {
+		$(this).css("width", Math.ceil(width / 5) * 5 + 25 + "px");
+	}
 });
 
 //Fire Fuction on Selct Click
@@ -296,7 +332,10 @@ $("#addToCart").click(function cartAdd() {
 	let shoeSize = $(".drop_down_arrow").val();
 	let dropDown = $(".drop_down_arrow").parent();
 	let product = {};
-	
+	let modalText = document.getElementById('cartModalText');
+	modalText.innerHTML = "";
+
+
 	//Check is shoe size is selected
 	if (shoeSize === "ALL") {
 		dropDown.focus();
@@ -315,10 +354,18 @@ $("#addToCart").click(function cartAdd() {
 			product.name = shoe[i].name;
 		}
 	}
+
+	//Add modal text to ensure prooduct is added to the cart	
+	modalText.innerHTML += '<div class="">' +
+		'<h4 class="m-0 mb-1">' + product.name + ' size ' + product.size + '" added to your cart.</h4>' +
+		'</div>'
+
 	//Add product to cart and local storage
 	cart.push(product);
 	localStorage.setItem("cart", JSON.stringify(cart));
-	
+
+
+
 	//Set Cart Count
 	cartCount()
 });
@@ -332,30 +379,27 @@ function fillCart() {
 	let total = 0;
 	let currencyTotal = '$' + total.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
 
-
 	//Add products to cart
 	for (i = 0; i < cartList.length; i++) {
 		cart.innerHTML += '<div class="cart_product row pr-br-bottom" id="' + [i] + '">' +
-			'<a href="' + cartList[i].url + '" class="col-sm cart_middle text-center p-0 mr-3">' +
+			'<a href="' + cartList[i].url + '" class="col cart_middle text-center p-0">' +
 			'<img src=' + cartList[i].mainImg + ' class="cart_img">' +
 			'</a>' +
-			'<div class="col cart_middle text-left p-0 pr-3 gr-tx">' +
-			'<h4 class="font-weight-bold m-0">' + cartList[i].name + '</h4>' +
-			'<h4 class="font-weight-bold m-0">' + cartList[i].size + '</h4>' +
+			'<div class="col cart_middle p-0 pr-3 gr-tx ml-4">' +
+			'<h4 class="font-weight-bold m-0 mb-1">' + cartList[i].name + '</h4>' +
+			'<h4 class="font-weight-bold m-0 mb-1">' + cartList[i].size + '</h4>' +
 			'</div>' +
-			'<div class="col product_count cart_middle text-left p-0 px-3 no_outline gr-tx">' +
-			'<h3 class="font-weight-bold d-inline-block"><input type="text" value="' + cartList[i].totalCount + '" class="item_count font-weight-bold"></h3>' +
-			'<h4 class="font-weight-bold d-inline-block">' + cartList[i].totalPrice + '</h4>' +
-			'<button class="pr-tx btn cl-bg p-0 d-inline-block">x</button>' +
+			'<div class="col- cart_middle p-0 no_outline gr-tx ml-2">' +
+			'<h3 class="font-weight-bold d-inline-block align-middle"><input type="text" value="' + cartList[i].totalCount + '" class="item_count_text font-weight-bold"></h3>' +
+			'<h4 class="font-weight-bold d-inline-block align-middle m-0 ml-2">' + cartList[i].totalPrice + '</h4>' +
+			'<button class="pr-tx btn cl-bg p-0 d-inline-block align-middle item_count_text">x</button>' +
 			'</div>' +
 			'</div>'
-		
+
 		currency = cartList[i].totalPrice;
-		price = Number(currency.replace(/[^0-9\.]+/g,""));
+		price = Number(currency.replace(/[^0-9\.]+/g, ""));
 		total += price;
 		currencyTotal = '$' + total.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
-		console.log(total);
-		console.log(currencyTotal);
 	}
 	$("#total").text(currencyTotal);
 }
@@ -376,7 +420,7 @@ $("#cart").on('change', 'input', function () {
 	let id = $(this).parent().parent().parent().attr('id');
 	let count = $(this).val();
 	let currency = cart[id].price;
-	let price = Number(currency.replace(/[^0-9\.]+/g,""));
+	let price = Number(currency.replace(/[^0-9\.]+/g, ""));
 	let productTotal = count * price;
 	let currencyTotal = '$' + productTotal.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
 

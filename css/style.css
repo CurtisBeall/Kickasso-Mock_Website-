@@ -120,6 +120,14 @@ a:hover,
 	display: inline;
 }
 
+/* Large Button Style */
+.btn-lg {
+	width: 100% !important;
+	min-width: 10rem !important;
+	max-width: 32rem !important;
+	padding: 1.5rem 1rem !important;
+}
+
 /*///////////////////////////////////////////////////////*/
 /* HTML Tag Styles */
 /*///////////////////////////////////////////////////////*/
@@ -191,7 +199,7 @@ button {
 }
 
 .cart_count {
-	padding: .05rem .5rem .1rem;
+	padding: .3rem .4rem .3rem;
 	margin: 0;
 	margin-right: .5rem;
 }
@@ -317,19 +325,13 @@ button {
 	background-repeat: no-repeat;
 	background-size: 7rem 7rem;
     background-clip: padding-box;
-	background-position:  right -2.9rem bottom .3rem;
-    padding: 0rem 0rem .25rem 0rem;
-	margin: 0 !important;
-	margin-top: .25rem;
+	background-position:  right -1.1rem bottom .15rem;
 	border: none;
     -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
 	font-weight: bold;
-	height: 2.35rem !important;
-	width: 3.5rem;
-	padding: 0  0 0 .4rem;
 }
 
 
@@ -346,10 +348,7 @@ button {
 }
 
 .shop_now_btn a{
-	margin-top: 45%;
-	width: 100%;
-	max-width: 45vw;
-	padding: 3%;
+	margin-top: 70%;
 }
 
 
@@ -527,13 +526,26 @@ background-color: black;
 }
 
 .shoe_info {
-	padding: 3rem 1rem !important;
+	padding: 3rem 0 !important;
+	width: 100%;
+}
+
+.shoe_info .row {
+	margin: 0 .5rem !important;
 }
 
 .shoe_text {
-	padding: 0;
+	padding: 0 .5rem;
 	text-align: left;
 	margin-bottom: 3rem;
+}
+
+.shoe_text_container select {
+	height: 100% !important;
+	padding-left: 2.5rem !important;
+	border-top: 1.5rem  #C9C9C9 solid;
+	border-bottom: 1.5rem  #C9C9C9 solid;
+	margin-right: .2rem;
 }
 
 .add_to_cart {
@@ -545,7 +557,7 @@ background-color: black;
 }
 
 .modal-lg {
-	max-width: 95vw !important;
+	max-width: 90vw !important;
 	margin: .5rem auto !important;
 }
 
@@ -602,15 +614,20 @@ background-color: black;
 /* Subtotal */
 /*///////////////////////////////////////////////////////*/
 .subtotal_container {
-	margin: 2rem 20%;
+	margin-top: 2rem;
+	margin-bottom: 5rem;
+	margin-left:  0;
+	margin-right:  0;
+	text-align: left !important;
 }
 
 .cart_product {
-	padding: 5% 0 !important;
+	padding: 1% 0 !important;
 	margin: 0 !important;
 }
 
 .cart_img {
+	min-width: 3rem !important;
 	width: 100% !important;
 	min-width: 4rem;
 }
@@ -619,31 +636,21 @@ background-color: black;
 	margin: auto;
 }
 
-.item_count {
+.item_count_text {
 	text-align: center;
 	border: .05rem #151C1F solid;
+	min-width: 2rem;
+	min-height: 2rem;
 	width: 5vw !important;
 	height: 5vw !important;
 	max-width: 4rem;
-	max-height: 4rem;
 	margin-right: 1vw;
-}
-
-.cart_middle button {
-	width: 3vw !important;
-	height: 3vw !important;
-	max-width: 4rem;
-	max-height: 4rem;
-	padding-bottom: .35rem !important;
+	margin: auto !important;
 }
 
 .cart_middle button:hover,
 .cart_middle button:focus {
 	font-weight: bold;
-}
-
-.product_count {
-	margin-left: 20% !important;
 }
 
 
@@ -652,11 +659,16 @@ background-color: black;
 /* Media Query */
 /*///////////////////////////////////////////////////////*/
 
-/* Max-Width: 325px and Orientation: Landscape */
+/* Max-Width: 625px and Orientation: Landscape */
 @media screen and (max-width: 625px) and (orientation: landscape) {
 	/* Effects */
 	.floating_btn {
 		top: 4.5rem !important;
+	}
+	
+	/* Index */
+	.shop_now_btn a{
+		margin-top: 45%;
 	}
 	
 	/* Shoe Info */
@@ -673,6 +685,7 @@ background-color: black;
 	.spam_img {
 		max-width: 50% !important;
 	}
+
 }
 
 
@@ -687,6 +700,17 @@ background-color: black;
 	/* HTML Tag Styles */
 	h1 {
 		font-size: 1.75rem !important;
+	}
+	
+	/* Index */
+	.shop_now_btn a{
+		margin-top: 45%;
+	}
+	
+	/* Shoe Info */	
+	.shoe_info .row {
+		transform: translateX(15%);
+		padding-right: 30%;
 	}
 	
 	/* About / Disclaimer / Return Policy */
@@ -714,7 +738,12 @@ background-color: black;
 	.spam_img {
 		max-width: 30% !important;
 	}
-}
+	
+	/* Subtotal */	
+	.subtotal_container {
+		margin-left:  10%;
+		margin-right:  10%;
+	}
 
 
 
@@ -760,10 +789,13 @@ background-color: black;
 		margin-top: 5% !important;
 	}
 	
-	/*	Index	*/
+	/* Navigation */
+	.cart_count {
+		padding: .1rem .5rem .1rem;
+	}
+
+	/* Index */
 	.shop_now_btn a{
-		max-width: 25rem;
-		padding: 2rem;
 		margin-bottom: 2rem;
 	}
 	
@@ -791,18 +823,23 @@ background-color: black;
 		bottom: -.5rem;
 	}
 	
-	/*	Shoe Info */
+	/* Shoe Info */
 	.shoe_header_text {
 		margin-top: -2rem;		
 		position: absolute;
 		left: 0;
 		right: 0;
-		top: 6rem;
+		top: 4rem;
 		z-index: 100;
 	}
 	
 	.shoe_info_container .col-m {
-		padding: 9rem 0 2rem !important;
+		padding: 9rem 0 3rem !important;
+	}
+	
+			.shoe_info .row {
+		transform: translateX(0);
+		padding: 0;
 	}
 	
 	.shoe_text_container {
@@ -832,8 +869,8 @@ background-color: black;
 	}
 	
 	.share_container {
-	margin: 25% 0 0;
-}
+		margin: 25% 0 0;
+	}
 	
 	/* Contact */
 	.contact_input {
@@ -846,6 +883,12 @@ background-color: black;
 	
 	.spam_img {
 		max-width: 25% !important;
+	}
+
+	/* Subtotal */
+	.subtotal_container {
+		margin-left:  15%;
+		margin-right:  15%;
 	}
 }
 
@@ -905,6 +948,11 @@ background-color: black;
 		margin-top: 10%;
 	}
 	
+	/* Shoe Info */
+	.modal-lg {
+		max-width: 115vh !important;
+	}
+
 	/* About / Disclaimer / Return Policy */
 	.text_container {
 		width: 70%;
@@ -918,7 +966,12 @@ background-color: black;
 	.contact_input div{
 		padding:  2rem 15%;
 	}
-
+		
+	/* Subtotal */
+	.subtotal_container {
+		margin-left:  8rem;
+		margin-right:  8rem;
+	}
 }
 
 /* Min-Width: 1825px */
