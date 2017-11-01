@@ -837,13 +837,13 @@ background-color: black;
 		padding: 9rem 0 3rem !important;
 	}
 	
-			.shoe_info .row {
+	.shoe_info .row {
 		transform: translateX(0);
 		padding: 0;
 	}
 	
 	.shoe_text_container {
-		padding: 0rem 20% !important;
+		padding: 0rem 15% !important;
 		height: 100%;
 	}
 	
