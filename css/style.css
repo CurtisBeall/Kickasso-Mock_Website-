@@ -116,7 +116,7 @@ a:hover,
 }
 
 /* Get Width For JS */
-#remove {
+#getWidth {
 	display: inline;
 }
 
@@ -685,7 +685,6 @@ background-color: black;
 	.spam_img {
 		max-width: 50% !important;
 	}
-
 }
 
 
@@ -744,7 +743,7 @@ background-color: black;
 		margin-left:  10%;
 		margin-right:  10%;
 	}
-
+}
 
 
 /* Min-Width: 925px */

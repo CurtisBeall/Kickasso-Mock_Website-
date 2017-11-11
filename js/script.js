@@ -129,8 +129,8 @@ $("select").click(function () {
 	let textLength = $(this).val();
 	let removetext = document.getElementById('filterResults');
 
-	removetext.innerHTML += "<h3 style='font-weight: bold;'><div id='remove'>" + textLength + "</div></h3>";
-	let width = $("#remove").width();
+	removetext.innerHTML += "<h3 style='font-weight: bold;' id='remove'><div id='getWidth'>" + textLength + "</div></h3>";
+	let width = $("#getWidth").width();
 	$("#remove").remove();
 	//Filter select box setup on Shop and Shoe Info pages
 	if (window.location.href.indexOf("shoe_info") > -1) {
