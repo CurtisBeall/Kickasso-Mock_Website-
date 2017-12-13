@@ -8,7 +8,7 @@ const shoe = [
 			type: "SANDALS",
 			size: ["11", "10", "9"],
 			price: "$130.00",
-			url: "file:///C:/Users/Curtis/Documents/Git%20Repos/Kickasso-Mock_Website-/shoe_info_donut_dreams.html",
+			url: "shoe_info_donut_dreams.html",
 			mainImg: "img/products/donut_dreams/IMG_1954.jpg",
 			keep: "true"
 		},
@@ -18,7 +18,7 @@ const shoe = [
 			type: "SNEAKERS",
 			size: ["11", "10"],
 			price: "$400.00",
-			url: "file:///C:/Users/Curtis/Documents/Git%20Repos/Kickasso-Mock_Website-/shoe_info_freddy_kreuger.html",
+			url: "shoe_info_freddy_kreuger.html",
 			mainImg: "img/products/freddy_kreuger/M16A4527.jpg",
 			keep: "true"
 		},
@@ -28,7 +28,7 @@ const shoe = [
 			type: "SNEAKERS",
 			size: ["12", "11", "10", "9"],
 			price: "$400.00",
-			url: "file:///C:/Users/Curtis/Documents/Git%20Repos/Kickasso-Mock_Website-/shoe_info_luxury_force_1_black.html",
+			url: "shoe_info_luxury_force_1_black.html",
 			mainImg: "img/products/luxury_force_1_black/M16A7498-2.jpg",
 			keep: "true"
 		},
@@ -38,7 +38,7 @@ const shoe = [
 			type: "SANDALS",
 			size: ["10", "9"],
 			price: "$150.00",
-			url: "file:///C:/Users/Curtis/Documents/Git%20Repos/Kickasso-Mock_Website-/shoe_info_adidas_akatsuki_slide.html",
+			url: "shoe_info_adidas_akatsuki_slide.html",
 			mainImg: "img/products/adidas_akatsuki_slide/M16A4862-2.jpg",
 			keep: "true"
 		},
@@ -48,7 +48,7 @@ const shoe = [
 			type: "SNEAKERS",
 			size: ["12", "11", "10"],
 			price: "315.00",
-			url: "file:///C:/Users/Curtis/Documents/Git%20Repos/Kickasso-Mock_Website-/shoe_info_super_mario_sb_dunk_low.html",
+			url: "shoe_info_super_mario_sb_dunk_low.html",
 			mainImg: "img/products/super_mario_sb_dunk_low/image.jpg",
 			keep: "true"
 		},
@@ -58,7 +58,7 @@ const shoe = [
 			type: "SANDALS",
 			size: ["10", "9"],
 			price: "$550.00",
-			url: "file:///C:/Users/Curtis/Documents/Git%20Repos/Kickasso-Mock_Website-/shoe_info_trusssssst_me_nike_slide.html",
+			url: "shoe_info_trusssssst_me_nike_slide.html",
 			mainImg: "img/products/trusssssst_me_nike_slide/product_image.jpg",
 			keep: "true"
 		}

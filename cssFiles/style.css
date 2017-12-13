@@ -57,7 +57,7 @@
 .outline:focus,
 button:hover,
 a:hover,
-:focus {
+body *:focus {
 	-webkit-box-shadow: 0 0 0 .2rem #FD3253 !important;
 	box-shadow: 0 0 0 .2rem #FD3253 !important;
 	outline: none !important;
@@ -99,6 +99,7 @@ a:hover,
 /* Toggle Hide */
 .hidden {
 	visibility: hidden;
+    pointer-events: none;
 }
 
 /* Floating Button Top Right */
@@ -321,6 +322,7 @@ button {
 }
 
 .drop_down_arrow {
+    -moz-appearance:none;
 	-webkit-appearance: none;
 	background-repeat: no-repeat;
 	background-size: 7rem 7rem;
@@ -367,6 +369,7 @@ button {
 }
 
 .filter_form_control {
+    -moz-appearance:none;
 	-webkit-appearance: none;
 	background-repeat: no-repeat;
 	background-size: 7rem 7rem;
@@ -531,7 +534,10 @@ background-color: black;
 }
 
 .shoe_info .row {
-	margin: 0 .5rem !important;
+	margin: 0 auto !important;
+    padding: 1rem;
+    min-width: 20rem;
+    max-width: 60%;
 }
 
 .shoe_text {
@@ -542,7 +548,7 @@ background-color: black;
 
 .shoe_text_container select {
 	height: 100% !important;
-	padding-left: 2.5rem !important;
+	padding-left: 2.25rem !important;
 	border-top: 1.5rem  #C9C9C9 solid;
 	border-bottom: 1.5rem  #C9C9C9 solid;
 	margin-right: .2rem;
@@ -656,6 +662,30 @@ background-color: black;
 
 
 /*///////////////////////////////////////////////////////*/
+/* Browser Query */
+/*///////////////////////////////////////////////////////*/
+.ie .nav_icons *:not(.outer_box):not(.drop_down_arrow){
+    background-size: 435%;
+}
+
+.ie .previous_icon {
+    background-position: -2.15rem -4.4rem;
+}
+
+.ie .next_icon {
+    background-position: -2.23rem -4.4rem;
+}
+
+.ie  .filter_form_control {
+    padding: 0rem 0rem .75rem 0rem;
+	background-position: 100% 50%;
+}
+
+ .ie  select::-ms-expand { display: none; }
+
+
+
+/*///////////////////////////////////////////////////////*/
 /* Media Query */
 /*///////////////////////////////////////////////////////*/
 
@@ -704,12 +734,6 @@ background-color: black;
 	/* Index */
 	.shop_now_btn a{
 		margin-top: 45%;
-	}
-	
-	/* Shoe Info */	
-	.shoe_info .row {
-		transform: translateX(15%);
-		padding-right: 30%;
 	}
 	
 	/* About / Disclaimer / Return Policy */
@@ -811,6 +835,7 @@ background-color: black;
 		width: 100%;
 		background-color: transparent!important;
 		visibility: visible;
+        pointer-events: auto;
 	}
 	
 	.filter_container div{
@@ -837,8 +862,7 @@ background-color: black;
 	}
 	
 	.shoe_info .row {
-		transform: translateX(0);
-		padding: 0;
+        max-width: 100%;
 	}
 	
 	.shoe_text_container {

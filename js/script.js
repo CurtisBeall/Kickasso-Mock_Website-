@@ -2,8 +2,16 @@
 //Windows.onLoad Functions
 //////////////////////////////
 window.onload = (function () {
+    const ie =  window.navigator.userAgent.indexOf("Trident") > -1 ||
+    		     window.navigator.userAgent.indexOf("MSIE") > -1;
+    
+    //Detect if browser Internet Explorer
+    if (ie === true) {
+        $("body").addClass("ie");
+    }
+    
 	//Set Cart Count
-	cartCount()
+	cartCount();
 
 	//Set Cart Count
 	$("#cart_count").text(cartCount)
@@ -62,15 +70,18 @@ function updateActive() {
 //Menu Toggle
 //////////////////////////////
 //Mouse Click Open
-$("#menu_btn").click(function (e) {
+$("#menu_btn").click(function (evt) {
+    $("#menu_btn").addClass("hidden");
+    document.activeElement.blur()
 	$("#menu").removeClass("hidden");
-	e.stopPropagation();
+    evt.stopPropagation();
 });
 
 //Mouse Click Close
 $(document).click(function () {
 	if ($("#menu").hasClass("hidden") === false) {
 		$("#menu").addClass("hidden");
+        $("#menu_btn").removeClass("hidden");
 	}
 });
 
@@ -94,27 +105,27 @@ $(document).keyup(function (e) {
 //Filter Toggle
 //////////////////////////////
 //Mouse Click Toggle
-$("#filter_btn").click(function (e) {
+$("#filter_btn").click(function (evt) {
 	if ($("#filter").hasClass("hidden") === false) {
 		$("#filter").addClass("hidden");
 		$("#filter_btn").removeClass("fill");
 	} else {
 		$("#filter").removeClass("hidden");
 		$("#filter_btn").addClass("fill");
-		e.stopPropagation();
+		evt.stopPropagation();
 	}
 });
 
 //Enter Press Open
-$("#filter_btn").keyup(function (e) {
-	if (e.keyCode === 13) {
+$("#filter_btn").keyup(function (evt) {
+	if (evt.keyCode === 13) {
 		$("#filter_btn").click();
 	}
 });
 
 //Esc Press Close
-$(document).keyup(function (e) {
-	if (e.keyCode === 27 && $("#filter").removeClass("hidden")) {
+$(document).keyup(function (evt) {
+	if (evt.keyCode === 27 && $("#filter").removeClass("hidden")) {
 		$(document).click();
 	}
 });
@@ -146,7 +157,7 @@ $("#filter_btn").click(function () {
 });
 
 function filterUnderlineOnload() {
-	let shop = "/C:/Users/Curtis/Documents/Git%20Repos/Kickasso-Mock_Website-/shop.html"
+	let shop = "shop.html"
 
 	$("select").click();
 }
@@ -286,6 +297,10 @@ function changeShoe(a) {
 	let action = a.innerHTML;
 	//Get stored shoe result list
 	let newList = JSON.parse(localStorage.getItem("newShoeList"));
+    
+    if(newList === null){
+        newList = shoe;
+    }
 
 	for (i = 0; i < newList.length; i++) {
 		if (currentShoe === newList[i].name) {
@@ -323,11 +338,9 @@ function changeShoe(a) {
 ///////////////////////////////
 //Cart
 //////////////////////////////
-//Add to Cart
-let cart = [];
-
+//Add to cart
 $("#addToCart").click(function cartAdd() {
-	cart = JSON.parse(localStorage.getItem("cart"));
+	let cart = JSON.parse(localStorage.getItem("cart"));
 	let shoeName = $("#shoeName").text();
 	let shoeSize = $(".drop_down_arrow").val();
 	let dropDown = $(".drop_down_arrow").parent();
@@ -355,7 +368,7 @@ $("#addToCart").click(function cartAdd() {
 		}
 	}
 
-	//Add modal text to ensure prooduct is added to the cart	
+	//Add modal text to confirm product is added to the cart	
 	modalText.innerHTML += '<div class="">' +
 		'<h4 class="m-0 mb-1">' + product.name + ' size ' + product.size + '" added to your cart.</h4>' +
 		'</div>'
@@ -436,8 +449,22 @@ $("#cart").on('change', 'input', function () {
 //Set Cart Count
 function cartCount() {
 	let cart = JSON.parse(localStorage.getItem("cart"));
-	let cartCount = cart.length;
+    let cartCount = 0;
+    
+    //Create cart if there is not one
+    if(cart === null) {
+        cart = [];
+        localStorage.setItem("cart", JSON.stringify(cart));
+    }
 
-	//Set Cart Count
-	$("#cart_count").text(cartCount)
+	for (i = 0; i < cart.length; i++) {
+        totalCount = parseInt(cart[i].totalCount);
+        cartCount += totalCount;
+    }
+    
+//	cartCount = cart.length;
+                console.log("cartCount is " + cartCount)
+
+    //Set Cart Count
+    $("#cart_count").text(cartCount)
 }
